@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Now - OM BOX MAKERS</title>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hero">
+  <h1>Online Order Form</h1>
+  <p>Place your Sweet Box Order Easily</p>
+  <a href="index.html" class="small-btn">⬅ Back Home</a>
+</header>
+
+<!-- FORM -->
+<section class="contact">
+  <h2>Fill Your Order Details</h2>
+
+  <div class="contact-card">
+    <form action="https://formsubmit.co/vishalgouswami106@gmail.com" method="POST">
+
+      <!-- FormSubmit settings -->
+      <input type="hidden" name="_next" value="thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="🛒 New Sweet Box Order with Rating">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+
+      <select name="box_type" required>
+        <option value="">Select Box Type</option>
+        <option>Wedding Special Box</option>
+        <option>Festival Gift Box</option>
+        <option>Dry Fruit Premium Box</option>
+      </select>
+
+      <input type="number" name="quantity" placeholder="Quantity" required>
+
+      <textarea name="message" placeholder="Any Custom Design Requirement"></textarea>
+
+      <!-- ⭐ RATING -->
+      <h3 class="rating-title">Rate Your Experience ⭐ (Optional)</h3>
+
+      <div class="rating">
+        <input type="radio" name="rating" id="star5" value="5">
+        <label for="star5">★</label>
+
+        <input type="radio" name="rating" id="star4" value="4">
+        <label for="star4">★</label>
+
+        <input type="radio" name="rating" id="star3" value="3">
+        <label for="star3">★</label>
+
+        <input type="radio" name="rating" id="star2" value="2">
+        <label for="star2">★</label>
+
+        <input type="radio" name="rating" id="star1" value="1">
+        <label for="star1">★</label>
+      </div>
+
+      <p id="rating-msg"></p>
+
+      <button type="submit" class="btn">✅ Submit Order</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 OM BOX MAKERS Packaging</p>
+</footer>
+
+<!-- ⭐ RATING JS -->
+<script>
+  const stars = document.querySelectorAll('input[name="rating"]');
+  const msg = document.getElementById("rating-msg");
+
+  stars.forEach(star => {
+    star.addEventListener("change", function () {
+      msg.innerText = `🙏 Thanks! You rated us ${this.value} ⭐`;
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Special Boxes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1>Wedding Special Boxes</h1>
+  <p>Premium Wedding Sweet Box Designs</p>
+  <a href="index.html" class="small-btn">⬅ Back Home</a>
+</header>
+
+<section class="gallery">
+  <h2>Wedding Box Gallery</h2>
+
+  <div class="gallery-grid">
+    <img src="images/wedding1.jpg" onclick="openImg(this.src)">
+    <img src="images/wedding2.jpg" onclick="openImg(this.src)">
+    <img src="images/wedding3.jpg" onclick="openImg(this.src)">
+    <img src="images/wedding4.jpg" onclick="openImg(this.src)">
+  </div>
+</section>
+
+<!-- Popup Box -->
+<div id="popup" onclick="closeImg()">
+  <img id="popupImg">
+</div>
+
+<script>
+function openImg(pic) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popupImg").src = pic;
+}
+
+function closeImg() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>

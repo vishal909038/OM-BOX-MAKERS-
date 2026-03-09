@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dry Fruit Premium Boxes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1>Dry Fruit Premium Boxes</h1>
+  <p>Luxury Boxes for Dry Fruits & Gifts</p>
+  <a href="index.html" class="small-btn">⬅ Back Home</a>
+</header>
+
+<section class="gallery">
+  <h2>Dry Fruit Box Gallery</h2>
+
+  <div class="gallery-grid">
+    <img src="images/dryfruit1.jpg" onclick="openImg(this.src)">
+    <img src="images/dryfruit2.jpg" onclick="openImg(this.src)">
+    <img src="images/dryfruit3.jpg" onclick="openImg(this.src)">
+    <img src="images/dryfruit4.jpg" onclick="openImg(this.src)">
+  </div>
+</section>
+
+<div id="popup" onclick="closeImg()">
+  <img id="popupImg">
+</div>
+
+<script>
+function openImg(pic) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popupImg").src = pic;
+}
+function closeImg() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>

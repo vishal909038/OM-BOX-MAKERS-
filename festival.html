@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festival Gift Boxes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1>Festival Gift Boxes</h1>
+  <p>Special Designs for Diwali, Rakhi & Holi</p>
+  <a href="index.html" class="small-btn">⬅ Back Home</a>
+</header>
+
+<section class="gallery">
+  <h2>Festival Box Gallery</h2>
+
+  <div class="gallery-grid">
+    <img src="images/festival1.jpg" onclick="openImg(this.src)">
+    <img src="images/festival2.jpg" onclick="openImg(this.src)">
+    <img src="images/festival3.jpg" onclick="openImg(this.src)">
+    <img src="images/festival4.jpg" onclick="openImg(this.src)">
+  </div>
+</section>
+
+<div id="popup" onclick="closeImg()">
+  <img id="popupImg">
+</div>
+
+<script>
+function openImg(pic) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popupImg").src = pic;
+}
+function closeImg() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
